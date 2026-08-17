@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    overscroll-behavior-y: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 16px;
+  }
+}
+
+/* KaTeX math formula responsiveness for mobile screens */
+.katex {
+  font-size: 1.02em !important;
+  max-width: 100%;
+  line-height: 1.2;
+}
+
+.katex-display {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  max-width: 100% !important;
+  padding: 4px 0 !important;
+  margin: 0.5em 0 !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.inline-math {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: middle;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+}
+
+/* Custom sleek scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(250, 204, 21, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(250, 204, 21, 0.8);
+}
+
+/* Safe areas for mobile devices */
+.pb-safe {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+.pt-safe {
+  padding-top: max(0.5rem, env(safe-area-inset-top));
+}
